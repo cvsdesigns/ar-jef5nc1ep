@@ -12,16 +12,12 @@
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
-            renderer="logarithmicDepthBuffer: true; antialias: true; gammaOutput: true; gammaFactor: 2.2;"
+            renderer="logarithmicDepthBuffer: true;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
             embedded
             gesture-detector
         >
-            <!-- Lighting -->
-            <a-light type="directional" intensity="1" position="2 4 -3"></a-light>
-            <a-light type="ambient" intensity="0.5"></a-light>
-
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
@@ -46,11 +42,10 @@
                     gltf-model="#animated-asset"
                     class="clickable"
                     gesture-handler
-                    material="roughness: 0.2; metalness: 0.5; emissive: #fff; emissiveIntensity: 0.5"
                 ></a-entity>
             </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
     </body>
-</html>
+</html> 
